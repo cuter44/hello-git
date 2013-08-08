@@ -41,7 +41,7 @@ next!!!
 ![](./res/setup-6.png)  
 建议这么点  
 
-![](./res/setup-7.png)
+![](./res/setup-7.png)  
 建议这么点  
 因为实验室里面有人(比如FTS)用Linux点这个是对Linux党和Windows党的人文关怀~
 
@@ -70,7 +70,7 @@ next!!!
 <del>回车然后它会提示"You appear to have cloned an empty repository"囧, 这是写教程时的状况请不要介意~</del>
 
 (赞助商广告时间)  
-Yoooo! [Github](https://github.com/cuter44/)求勾搭~  
+Yoooo! [galin@Github](https://github.com/cuter44/)求勾搭~  
 
 欢迎继续收看git讲座脑内小剧场(卖笑)  
 呃呃呃鉴于出了点小状况我们从上上步重新来过, 时间关系我已经在幕后用命令行clone以及各种非正常手段...反正现在我们已经拿到版本库就对了.  
@@ -143,7 +143,7 @@ wjh(T▽T): はい、はい。。。
 ![](./res/wjh-1.png)  
 (**注意:在切换分支前最好先将正在工作的分支stage+commit一次, 否则未缓存的改动可能会被切换分支覆盖掉**)(假如将会发生这种情况的话git会预警并阻止你check out, 但是做人还是自重点比较好)  
 (**注意**:check out之前最好先 remote > fetch 一次以保证本地的内容是最新的, 否则merge就没意义了, fetch操作不会丢失任何的本地内容(即使未保存)可以放心使用)  
-哦顺带一提所谓"跟踪(remote)分支"完全是个翻译错误, 正确意思是"远程分支"  
+哦顺带一提所谓"跟踪分支(remote branch)"完全是个翻译错误, 正确意思是"远程分支". 翻译的资源文件在`Git\share\git-gui\lib\msgs\zh_cn.msg`, 谁闲得蛋疼可以做个完全版的patch出来造福人民(反正我是打开那个文件后就完全没兴趣了)  
 
 现在可以开始merge了, 点 合并(merge) > 本地合并(local merge)↓  
 ![](./res/wjh-2.png)  
