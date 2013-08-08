@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>git-usage.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+    margin: 0 auto;
+    font-family: Georgia, Palatino, serif;
+    color: #444444;
+    line-height: 1;
+    max-width: 960px;
+    padding: 5px;
+}
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 16px;
+    padding: 0;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 22px;
+    margin: 20px 0 6px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    color: purple;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+    margin-left: 44px;
+}
+li ul, li ul {
+    margin-left: 24px;
+}
+p, ul, ol {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 540px;
+}
+pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+    background-color: #f0f0f0;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {  
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 540px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+  display: inline-block;
+  width: 210px;
+  padding: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+select, input[type=file] {
+  height: 27px;
+  line-height: 27px;
+}
+textarea {
+  height: auto;
+}
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #004b9a;
+  border-bottom-color: #003f81;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  color: #fff;
+  background-position: 0 -15px;
+  text-decoration: none;
+}
+button:active {
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* CSS stylesheet is based on Kevin Burke's Markdown.css project (http://kevinburke.bitbucket.org/markdowncss) */
+</style>
+</head>
+<body>
+<h1>N935专用git简明讲座</h1>
+
+<blockquote>
+  <p>author by galin <a href="mailto:cuter44@qq.com">cuter44@qq.com</a><br />
+  CC 3.0 BY  </p>
+</blockquote>
+
+<p>Yooooo! 这里是galin, 今天要讲解的是git的配置和使用方法(Windows向, Linux党除了配置环境变量稍有出入的话应该问题不大, CLI爱好者请自己搜咯).<br />
+这个教程是使用了开发中的TVProtal项目作为<del>场景</del>脑内小剧场, 好处是这样写更易懂也更贴合现在的工作流, 坏处是<strong>实际中使用的工作流不是这样子</strong>的(°д°)b, 我的想法是大家借这个doc了解git的用法并且在10分钟之内就可以上手, 但是如果你想要将git转变为一种可迁移技能的话你应该阅读更多资料比如<a href="http://www.worldhello.net/gotgithub/">GotGitHub</a>(很抱歉我已经找不到更多的,存活的,中文的教程了)<br />
+最后一句废话: 有硬伤的话请不吝吐槽m(_ _)m, 好下面是正篇.  </p>
+
+<blockquote>
+  <p>剧本: galin<br />
+  主演: galin, FTS., wjh, xillkey (后面两人是我杜撰的请勿介意)</p>
+</blockquote>
+
+<h2>Chapter 0 服务器的安装和配置</h2>
+
+<p>留给FTS.写.<br />
+本章完</p>
+
+<h2>Chapter 1 客户端安装和配置</h2>
+
+<p>作为程序猿一定要养成去发行源下载的好习惯! git的发布地址是 <a href="http://git-scm.com/">http://git-scm.com/</a>, 不过目前已被墙所以我就黑心点自己配了个源:  </p>
+
+<p><a href="./bin/Git-1.7.11-preview20120620.exe">点此下载无毒无木马无广告无暗扣_(:з」∠)_</a>  </p>
+
+<p>已经装好的话点<a href="#finish-install">这里</a>跳过</p>
+
+<p>安装过程很人性化:<br />
+<img src="./res/setup-1.png" alt="" /><br />
+next!  </p>
+
+<p><img src="./res/setup-2.png" alt="" /><br />
+next!!  </p>
+
+<p><img src="./res/setup-3.png" alt="" /><br />
+个人喜好即可  </p>
+
+<p><img src="./res/setup-4.png" alt="" /><br />
+建议这么点<br />
+如果你机器上已经安装有Mingw GCC或者类似东西的话那么你已经自带了一个MSYS(用来在Windows上模拟Bash的工具), 此时你可以考虑不点最下面那个.sh  </p>
+
+<p><img src="./res/setup-5.png" alt="" /><br />
+next!!!  </p>
+
+<p><img src="./res/setup-6.png" alt="" /><br />
+建议这么点  </p>
+
+<p><img src="./res/setup-7.png" alt="" />
+建议这么点<br />
+因为实验室里面有人(比如FTS.)用Linux点这个是对Linux党和Windows党的人文关怀~</p>
+
+<p><a id="finish-install"></a>到这里就装完了, 首次起动之前, 你需要和FTS.或galin联系为你建个新的帐号. 如果你熟悉SSH和Bash的话也可以自己来:</p>
+
+<pre><code>ssh root@10.50.9.1
+# 密码是rootroot
+useradd 你的id -Gn935
+passwd 你的id
+# 然后按提示帮自己设密码
+logout
+</code></pre>
+
+<p>顺带一提git的bin目录下自带OpenSSH你懂的, path的话我忘记要自己添加还是它自动帮你加的了, 反正你懂的~  </p>
+
+<p>很好你现在已经有帐号密码了, 来战个痛决!</p>
+
+<p>开始菜单 > git GUI ↓<br />
+<img src="./res/main-1.png" alt="" /><br />
+由于TVProtal已经写好成吨的代码了这里我们选克隆.  </p>
+
+<p><img src="./res/main-2.png" alt="" /><br />
+这里将galin换成你自己的ID _(:з」∠)_<br />
+以及由于我昨晚乱搞的关系现在的Source Locatio已经变成了 <code>${user}@10.50.9.1:/root/projects/tvprotal/.git</code>了<br />
+让你输入什么就输入好了, 无脑操作 ╮(╯▽╰)╭</p>
+
+<p>回车然后它会提示"You appear to have cloned an empty repository"囧, 这是写教程时的状况请不要介意~</p>
+
+<p>呃呃呃鉴于出了点小状况我们从上上步重新来过, 时间关系我已经在幕后用命令行clone并且稍微做了点手脚...<br />
+刚才如果成功clone的话会显示"最近的版本库", 我戳~  </p>
+
+<p><img src="./res/main-3.png" alt="" /><br />
+一点都不帅对吧, 想要装逼的话你可以试下用<a href="http://sourceforge.net/projects/gitextensions/">Git Extensions</a>, 走好不送.  </p>
+
+<p>用之前还要适当配置:<br />
+编辑(edit) > 选项(options)
+用户名和邮箱是必填的(责任追踪到人!), 填全局还是版本库随你, 其余选项按个人喜好~<br />
+现在除了带有clear/delete/rename/reset之类的危险字眼的操作其它你可以四处逛逛了, 不过后面我们会讲解大部分功能的.</p>
+
+<p><strong>科普向</strong>  关于git的分支概念:<br />
+<img src="./res/branches.png" alt="" /><br />
+图示是galin的伪春菜的branches图(典型反例请勿模仿).  </p>
+
+<p>git对分支的限定相当宽松, 你可以以任何一个节点为基础(base)派生出新分支(甚至可以凭空(orphan)生成分支), 分支也可以随时被合并到其它分支中.<br />
+这样做的好处是<strong>能够在合作编程时最大程度地避免干扰</strong>(因为冲突只会发生在合并操作时), 合并时git可以很智能地自动合并大部分更改, 在git无法处理的情况下它会提示用户具体哪行发生了冲突, 然后由用户选择保留谁的修改(注意是选择~单选题壁简答题容易好多对不对?).  </p>
+
+<p>通常会设定一个主分支, 以作为派生分支的基准和可以发行的副本(记住就好, 现在不用理解这个概念)  </p>
+
+<p>还有我想吐槽的是由于坑货FTS.的缘故, 本来我们还可以架个私有的<a href="https://github.com">GitHub</a>(好处是集成了代码直接下载/即时代码吐槽/错误追踪/wiki等有用功能), 但是现在没有, 我-很-不-开-心(本章完)  </p>
+
+<h2>Chapter 2 xillkey之章(日常的使用状况)</h2>
+
+<p>2013年8月某日, xillkey刚来准备做网页渲染, galin在补觉, wjh...不知道在干嘛.<br />
+xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的新版本(假设他昨晚做的更改已经交给wjh合并了, 当然并不需要每晚合并)并创建自己的分支(避免冲突)<br />
+分支(branch) > 新建(create) ↓<br />
+<img src="./res/xillkey-1.png" alt="" /><br />
+这样就行了</p>
+
+<p>这里假定xillkey增加了一个css文件, 这个改动会被反映在git的面板上↓(没看到? 点"重新扫描(rescan)"):<br />
+<img src="./res/xillkey-2.png" alt="" /></p>
+
+<p>点文件名可以查看变更的内容, diff可以显示行级的修改情况.<br />
+点图标就可以将所作的变动保存到绿色框的区域下来↓<br />
+两个框都支持同样的交互哦, 简单直观~<br />
+<img src="./res/xillkey-3.png" alt="" />  </p>
+
+<p>xillkey可以随时点提交(commit)保存已经缓存的改动, 提交操作不会实际上传数据到服务器, 而是将在本地生成一个保存点(打机时的checkpoint都知道?).<br />
+所有已经下载到本地(fetch)的更改记录都可以用分支查看器检视↓<br />
+<img src="./res/xillkey-4.png" alt="" /></p>
+
+<p>假如xillkey发现他将代码改到太糟糕想倒回去的话(那天晚上我们在调IE不能显示格子就是实例), 他可以在这个界面想要回退到的节点上面点右键 > Reset xillkey branch to here, 然后代码就会被回滚到相应位置了.  </p>
+
+<p>若干小时后...<br />
+xillkey认为他已经完成工作了, 他可以最后commit一次, 然后点上传(push)(再强调一次只commit不push的话是不会将修改打入服务器的, FTS.今天就是这样坑我的)<br />
+<img src="./res/xillkey-5.png" alt="" /><br />
+可以一次上传多个分支, 只有选中分支的更改会上传到服务器. 目标版本库的话由于只有一个所以不用费心了<br />
+上传后的版本库如图↓(注意wjh在这几个小时内也做出了自己的更改)<br />
+<img src="./res/xillkey-6.png" alt="" /></p>
+
+<p>根据老邝原本的设定是要由wjh负责做整合的. 所以此时 xillkey 只需要确认上传完了就可以关机走人了, 当然走之前还需要:<br />
+xillkey(^ω^): 搞掂, wjh记得将我改的部分合并进去~<br />
+wjh(T▽T): はい、はい。。。</p>
+
+<p><strong>科普向</strong> 随手merge解救wjh<br />
+通常来说代码是你写的肯定是你最清楚要改哪里才对, 将代码交给别人做合并其实是一个很不"业界良心"的事. 虽然说使用显式分支可以大大降低冲突的机会, 但还是不能完全避免冲突的. 苦逼的wjh在合并时如果不发生冲突还好, <strong>发生冲突的话他就要苦逼地找造成冲突的责任者来解决问题.</strong><br />
+接下来的一章将会讲解最常用的merge操作, 如果你想继续坑wjh的话看到这里就够了, 继续看下去的话...不好意思没有奖品.
+(本章完)</p>
+
+<h1>Chapter 3 wjh之章(自动合并:wjh的救赎之路)</h1>
+
+<p>好吧这章是专门写给wjh看的我们一切从简.<br />
+即使是贵为wjh的存在也是不应该直接动master分支的, 所以wjh也有自己的分支.  </p>
+
+<p>若干分钟前, wjh接到了xillkey的merge请求. 于是他叹了口气, 保存自己的工作, 打开git GUI 切换到master分支上↓<br />
+<img src="./res/wjh-1.png" alt="" /><br />
+(<strong>注意:在切换分支前最好先将正在工作的分支stage+commit一次, 否则未缓存的改动可能会被切换分支覆盖掉</strong>)(假如将会发生这种情况的话git会预警并阻止你check out, 但是做人还是自重点比较好)<br />
+(<strong>注意</strong>:check out之前最好先remote > fetch一次以保证本地的内容是最新的否则merge就没意义了, fetch操作不会丢失任何的本地内容(即使未保存)可以放心使用)<br />
+哦顺带一提所谓"跟踪(remote)分支"完全是个翻译错误, 正确意思是"远程分支"  </p>
+
+<p>现在可以开始merge了, 点 合并(merge) > 本地合并(local merge)↓<br />
+<img src="./res/wjh-2.png" alt="" /><br />
+选择xillkey的分支, 然后合并, 如果没发生冲突的话, 合并就完成了↓<br />
+<img src="./res/wjh-3.png" alt="" />  </p>
+
+<p><strong>科普向</strong> 分支可以重用吗?<br />
+答案是可以的, xillkey在第二天来的时候既可以 1.从 master 创建新的 branch, 2. 从 master 合并到 xillkey(推荐), 3. 直接在 xillkey 上修改完成后再次合并到 master(极不推荐)<br />
+三种方法是有差别的, 这是个逻辑问题这里就不展开说了.</p>
+
+<p>(本章完)</p>
+
+<h1>Chapter 4 galin之章(冲突的解决办法)</h1>
+
+<p>5点通常都是叫外卖的时候, 既然有了 git 的合并功能, 那么在 QQ 上吆喝谁吃什么再手动收集显然是不科学的事.<br />
+所以, wjh创建了一个调查表what-to-eat.txt来收集订餐状况.  </p>
+
+<p>what-to-eat.txt(master分支的内容)</p>
+
+<pre><code>(空白)
+</code></pre>
+
+<p>饱睡的galin听到"外卖"两字瞬间暴起以最快速度完成了branch-commit-merge操作:</p>
+
+<p>what-to-eat.txt(galin, master两个分支的内容)</p>
+
+<pre><code>galin(ﾟДﾟ；):我要吃肉卷饭!!
+</code></pre>
+
+<p>而xillkey则慢了一步, 在galin修改文件时他才刚好fetch完, 当他merge的时候, 冲突发生了:<br />
+<img src="./res/galin-1.png" alt="" />  </p>
+
+<p>此时同一文件的不同状态是:</p>
+
+<p>what-to-eat.txt(xillkey分支的内容)</p>
+
+<pre><code>xillkey(‾▽‾"):我要烤鸭饭好了.
+</code></pre>
+
+<p>what-to-eat.txt(master分支的内容)</p>
+
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+﻿galin(ﾟДﾟ；):我要吃肉卷饭!!
+=======
+﻿xillkey(‾▽‾"):我要烤鸭饭好了.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; xillkey
+</code></pre>
+
+<p>同时git主面板会变得色彩斑斓:<br />
+<img src="./res/galin-2.png" alt="" /><br />
+(不要吐槽乱码这个不是重点)<br />
+那三行黄色的(对应源文件的三行)就是git加上去的, 意思是要提醒你哪里冲突了, 这时你要做的就是用编辑器打开冲突的文件(不能直接在git面板改), 改成你期望的结果.  </p>
+
+<p>这里按照场景应该将两行都保留下来, 所以直接删掉第1,3,5行即可.</p>
+
+<p>如果你什么都不改或者漏了哪里没改的话, 你将会被git吐槽, 非常人性化的设定有木有~</p>
+
+<p>(完结, 应该不会有 episode 2 了)</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
