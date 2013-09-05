@@ -343,7 +343,8 @@ logout
 
 <p><img src="./res/main-2.png" alt="" /><br />
 这里将galin换成你自己的ID _(:з」∠)_<br />
-以及由于我昨晚乱搞的关系现在的Source Locatio已经变成了 <code>你的id@10.50.9.1:/root/projects/tvprotal/.git</code>了<br />
+<del>以及由于我昨晚乱搞的关系现在的Source Locatio已经变成了 <code>你的id@10.50.9.1:/root/projects/tvprotal/.git</code>了</del><br />
+然后由于wjh的暴力操作现在版本库又被迁移到 <code>/opt/tvprotal</code><br />
 让你输入什么就输入好了, 无脑操作 ╮(╯▽╰)╭</p>
 
 <p><del>回车然后它会提示"You appear to have cloned an empty repository"囧, 这是写教程时的状况请不要介意~</del></p>
@@ -374,7 +375,23 @@ Yoooo! <a href="https://github.com/cuter44/">galin@Github</a>求勾搭~  </p>
 
 <p>还有我想吐槽的是由于坑货FTS的缘故, 本来我们还可以架个私有的<a href="https://github.com">GitHub</a>(好处是集成了代码直接下载/即时代码吐槽/错误追踪/wiki等有用功能), 但是现在没有, 我-很-不-开-心(本章完)  </p>
 
-<h2>Chapter 2 xillkey之章(日常的使用状况)</h2>
+<h2>Chapter 1.99 版本管理基础知识恶补</h2>
+
+<p>此章节主要面向超☆新手向的同学, 目前内容只有一条, 但我相信会越来越多的:  </p>
+
+<p><ul>
+<li>无论如何都要理解关于<strong>仓库</strong>和<strong>工作版本</strong>的区别</p>
+
+<blockquote>
+  <p><strong>档案库（Repository）</strong>
+  存储档案的新版本还有历史资料的地方，通常是在服务器上。有时候也叫Depot（像是在SVK、AccuRev还有Perforce中） <strong>对于git而言在你的本地也有一个库, 它(可以这么说)是服务器上的仓库的副本</strong><br />
+  <strong>工作版本（Working copy）</strong>
+  从档案库中取出一个本地端（客户端）的复制，针对一个特定的时间或是版本。所有在档案库中的档案更动，都是从一个工作版本中修改而来的，这也是这名称的由来。观念上，这是一个沙盒。<strong>一言以蔽之, 就是你能直接看到的"自己写的代码"</strong>.</li>
+  <li>根据上述内容, 你<strong>不需要而且千万不要将你克隆下来的代码复制到另一个文件夹, 修改好再覆盖回去</strong>, git或者其他版本管理工具不会通过监视你的文件复制来复制去就自动维护版本. 正确的做法是<strong><span style="color: red;">直接在你的工作版本内进行编辑, 每当你完成一阶段的工作后手动地将代码提交到仓库中</span></strong>.</li>
+  </ul></p>
+  
+  <h2>Chapter 2 xillkey之章(日常的使用状况)</h2>
+</blockquote>
 
 <p>2013年8月某日, xillkey刚来准备做网页渲染, galin在补觉, wjh...不知道在干嘛.<br />
 xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的新版本(假设他昨晚做的更改已经交给wjh合并了, 当然并不需要每晚合并)并创建自己的分支(<strong>重要</strong> 这是避免冲突的法门)<br />
@@ -413,7 +430,7 @@ wjh(T▽T): はい、はい。。。</p>
 接下来的一章将会讲解最常用的merge操作, 如果你想继续坑wjh的话看到这里就够了, 继续看下去的话...不好意思没有奖品.
 (本章完)</p>
 
-<h1>Chapter 3 wjh之章(自动合并:wjh的救赎之路)</h1>
+<h2>Chapter 3 wjh之章(自动合并:wjh的救赎之路)</h2>
 
 <p>好吧这章是专门写给wjh看的我们一切从简.<br />
 即使是贵为wjh的存在也是不应该直接动master分支的, 所以wjh也有自己的分支.  </p>
@@ -440,7 +457,7 @@ wjh(T▽T): はい、はい。。。</p>
 
 <p>(本章完)</p>
 
-<h1>Chapter 4 galin之章(冲突的解决办法)</h1>
+<h2>Chapter 4 galin之章(冲突的解决办法)</h2>
 
 <p>5点通常都是叫外卖的时候, 既然有了 git 的合并功能, 那么在 QQ 上吆喝谁吃什么再手动收集显然是不科学的事.<br />
 所以, wjh创建了一个调查表what-to-eat.txt来收集订餐状况.  </p>
@@ -484,7 +501,7 @@ wjh(T▽T): はい、はい。。。</p>
 <p>这里按照场景应该将两行都保留下来, 所以直接删掉第1,3,5行即可.  </p>
 
 <p>如果你什么都不改或者漏了哪里没改的话, 你将会被git吐槽<br />
-<em>愚蠢的人类你还没有解决冲突呢真的要保存吗? >是(灰色的) >否</em></p>
+<em>愚蠢的蓝星人你还没有解决冲突呢真的要保存吗? >是(灰色) >否</em></p>
 
 <p><strong>科普向</strong> 正确撰写commit message<br />
 估计你在点"提交"时已经遇到过这个状况了, git不允许将这里留空, 这是个好习惯, 无论是单机还是团战, 知道某个节点改了什么内容是非常重要的.<br />
@@ -507,7 +524,15 @@ wjh(T▽T): はい、はい。。。</p>
 
 <p>大概就是这样咯, 这种事见仁见智我就不说什么了\挖鼻</p>
 
-<p>(完结, 应该不会有 episode 2 了)</p>
+<h2>Side Color I 正常青年和作死青年</h2>
+
+<p><em>那个...不定期更新, 欢迎投稿~</em>↓</p>
+
+<p><img src="./res/final-1-right.png" alt="" /><br />
+普通青年: 以单一的版本作为根, 有序地分支和合并分支.  </p>
+
+<p><img src="./res/final-1-wrong.png" alt="" />
+作死青年: 给别人分发代码时没有附带版本化信息, 拿回来后合并出一吨的冲突只好手动解决.</p>
 
 </body>
 </html>
