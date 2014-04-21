@@ -22,26 +22,26 @@ Yooooo! 这里是galin, 今天要讲解的是git的配置和使用方法(Windows
 已经装好的话点[这里](#finish-install)跳过
 
 安装过程很人性化:  
-![](./res/setup-1.png)  
+![](./asset/setup-1.png)  
 next!  
 
-![](./res/setup-2.png)  
+![](./asset/setup-2.png)  
 next!!  
 
-![](./res/setup-3.png)  
+![](./asset/setup-3.png)  
 个人喜好即可  
 
-![](./res/setup-4.png)  
+![](./asset/setup-4.png)  
 建议这么点  
 如果你机器上已经安装有Mingw GCC或者类似东西的话那么你已经自带了一个MSYS(用来在Windows上模拟Bash的工具), 此时你可以考虑不点最下面那个.sh  
 
-![](./res/setup-5.png)  
+![](./asset/setup-5.png)  
 next!!!  
 
-![](./res/setup-6.png)  
+![](./asset/setup-6.png)  
 建议这么点  
 
-![](./res/setup-7.png)  
+![](./asset/setup-7.png)  
 建议这么点  
 因为实验室里面有人(比如FTS)用Linux点这个是对Linux党和Windows党的人文关怀~
 
@@ -59,10 +59,10 @@ next!!!
 很好你现在已经有帐号密码了, 来战个痛决!
   
 开始菜单 > git GUI ↓  
-![](./res/main-1.png)  
+![](./asset/main-1.png)  
 由于TVProtal已经写好成吨的代码了这里我们选克隆.  
 
-![](./res/main-2.png)  
+![](./asset/main-2.png)  
 这里将galin换成你自己的ID \_(:з」∠)\_  
 <del>以及由于我昨晚乱搞的关系现在的Source Locatio已经变成了 `你的id@10.50.9.1:/root/projects/tvprotal/.git`了</del>  
 然后由于wjh的暴力操作现在版本库又被迁移到 `/opt/tvprotal`  
@@ -77,16 +77,16 @@ Yoooo! [galin@Github](https://github.com/cuter44/)求勾搭~
 呃呃呃鉴于出了点小状况我们从上上步重新来过, 时间关系我已经在幕后用命令行clone以及各种非正常手段...反正现在我们已经拿到版本库就对了.  
 刚才如果成功clone的话会显示"最近的版本库", 我戳~  
 
-![](./res/main-3.png)  
+![](./asset/main-3.png)  
 一点都不帅对吧, 想要装逼的话你可以试下用[Git Ex](http://sourceforge.net/projects/gitextensions/), 走好不送.  
 
 用之前还要适当配置:  
 编辑(edit) > 选项(options)  
 **用户名和邮箱是必填的**(责任追踪到人!), 填全局还是版本库随你, 其余选项按个人喜好~  
-现在除了带有clear/delete/rename/reset/remove之类的危险字眼的操作其它你可以四处逛逛了, 不过后面我们会讲解大部分功能的.  
+现在除了带有clear/delete/rename/assetet/remove之类的危险字眼的操作其它你可以四处逛逛了, 不过后面我们会讲解大部分功能的.  
 
 **科普向**  关于git的分支概念:   
-![](./res/branches.png)  
+![](./asset/branches.png)  
 图示是galin的伪春菜的branches图(典型反例请勿模仿). 如果你对蜘蛛网有变态嗜好的话可以观赏下某些著名的库比如[jQuery的分支图](https://github.com/jquery/jquery/network)  
 
 git对分支的限定相当宽松, 你可以以任何一个节点为基础(base)派生出新分支(甚至可以凭空(orphan)生成分支), 分支也可以随时被合并到其它分支中.  
@@ -112,30 +112,30 @@ git对分支的限定相当宽松, 你可以以任何一个节点为基础(base)
 2013年8月某日, xillkey刚来准备做网页渲染, galin在补觉, wjh...不知道在干嘛.  
 xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的新版本(假设他昨晚做的更改已经交给wjh合并了, 当然并不需要每晚合并)并创建自己的分支(**重要** 这是避免冲突的法门)  
 分支(branch) > 新建(create) ↓  
-![](./res/xillkey-1.png)  
+![](./asset/xillkey-1.png)  
 这样就行了...哦截图时分支名字忘了填, 写自己喜欢的标识符就好(但是最好能顾名思义, 因为大家都能看到)
   
 这里假定xillkey增加了一个css文件, 这个改动会被反映在git的面板上↓  
-_没看到? 我才不会告诉你要点 重新扫描(rescan) 呢_  
-![](./res/xillkey-2.png)
+_没看到? 我才不会告诉你要点 重新扫描(assetcan) 呢_  
+![](./asset/xillkey-2.png)
 
 点文件名可以查看变更的内容, diff可以显示行级的修改情况.  
 点图标就可以将所作的变动保存到绿色框的区域下来↓  
 两个框都支持同样的交互哦, 简单直观~  
-![](./res/xillkey-3.png)  
+![](./asset/xillkey-3.png)  
 
 xillkey可以随时点提交(commit)保存已经缓存的改动, 提交操作不会实际上传数据到服务器, 而是将在本地生成一个保存点(打机时的checkpoint都知道?).  
 所有已经下载到本地(fetch)的更改记录都可以用分支查看器检视↓(在版本库(repository) > 查看所有分支历史(visuallize all branches' history))  
-![](./res/xillkey-4.png)
+![](./asset/xillkey-4.png)
 
 假如xillkey发现他将代码改到太糟糕想倒回去的话(那天晚上我们在调IE不能显示格子就是实例), 他可以在这个界面想要回退到的节点上面点右键 > Reset xillkey branch to here, 然后代码就会被回滚到相应位置了.  
 
 若干小时后...  
 xillkey认为他已经完成工作了, 他可以最后commit一次, 然后点上传(push)(再强调一次只commit不push的话是不会将修改打入服务器的, FTS今天就是这样坑我的)  
-![](./res/xillkey-5.png)  
+![](./asset/xillkey-5.png)  
 可以一次上传多个分支, 只有选中分支的更改会上传到服务器. 目标版本库的话由于只有一个所以不用费心了.  
 上传后的版本库如图↓(注意wjh在这几个小时内也做出了自己的更改)  
-![](./res/xillkey-6.png)
+![](./asset/xillkey-6.png)
 
 根据老邝原本的设定是要由wjh负责做整合的. 所以此时 xillkey 只需要确认上传完了就可以关机走人了, 当然走之前还需要:  
 xillkey(^ω^): 搞掂, wjh记得将我改的部分合并进去~  
@@ -152,16 +152,16 @@ wjh(T▽T): はい、はい。。。
 即使是贵为wjh的存在也是不应该直接动master分支的, 所以wjh也有自己的分支.  
 
 若干分钟前, wjh接到了xillkey的merge请求. 于是他叹了口气, 保存自己的工作, 打开git GUI 切换到master分支上↓  
-![](./res/wjh-1.png)  
+![](./asset/wjh-1.png)  
 (**注意:在切换分支前最好先将正在工作的分支stage+commit一次, 否则未缓存的改动可能会被切换分支覆盖掉**)(假如将会发生这种情况的话git会预警并阻止你check out, 但是做人还是自重点比较好)  
 (**注意**:check out之前最好先 remote > fetch 一次以保证本地的内容是最新的, 否则merge就没意义了, fetch操作不会丢失任何的本地内容(即使未保存)可以放心使用)  
 哦顺带一提所谓"跟踪分支(remote branch)"完全是个翻译错误, 正确意思是"远程分支". 翻译的资源文件在`Git\share\git-gui\lib\msgs\zh_cn.msg`, 谁闲得蛋疼可以做个完全版的patch出来造福人民(反正我是打开那个文件后就完全没兴趣了)  
 
 现在可以开始merge了, 点 合并(merge) > 本地合并(local merge)↓  
-![](./res/wjh-2.png)  
+![](./asset/wjh-2.png)  
 选择xillkey的分支, 然后合并, 如果没发生冲突的话, 合并就完成了↓  
 (注意 master 已经进化到和 xillkey 同一水平)  
-![](./res/wjh-3.png)  
+![](./asset/wjh-3.png)  
 
 **科普向** 分支可以重用吗?  
 答案是可以的, xillkey在第二天来的时候可以  
@@ -189,7 +189,7 @@ what-to-eat.txt(galin, master两个分支的内容)
     galin(ﾟДﾟ；):我要吃肉卷饭!!
 
 而xillkey则慢了一步, 在galin修改文件时他才刚好fetch完, 当他merge的时候, 冲突发生了:  
-![](./res/galin-1.png)  
+![](./asset/galin-1.png)  
 
 此时同一文件的不同状态是:
 
@@ -206,7 +206,7 @@ what-to-eat.txt(master分支的内容)
     >>>>>>> xillkey
 
 同时git主面板会变得色彩斑斓:  
-![](./res/galin-2.png)  
+![](./asset/galin-2.png)  
 (不要吐槽乱码这个不是重点)  
 那三行黄色的(对应源文件的三行)就是git加上去的, 意思是要提醒你哪里冲突了, 这时你要做的就是用编辑器打开冲突的文件(不能直接在git面板改), 改成你期望的结果.  
 
@@ -239,8 +239,8 @@ _愚蠢的蓝星人你还没有解决冲突呢真的要保存吗? >是(灰色) >
 
 _那个...不定期更新, 欢迎投稿~_↓
 
-![](./res/final-1-right.png)  
+![](./asset/final-1-right.png)  
 普通青年: 以单一的版本作为根, 有序地分支和合并分支.  
 
-![](./res/final-1-wrong.png)
+![](./asset/final-1-wrong.png)
 作死青年: 给别人分发代码时没有附带版本化信息, 拿回来后合并出一吨的冲突只好手动解决.

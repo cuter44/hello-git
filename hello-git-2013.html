@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>hello-git-2013</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>N935专用git简明讲座</h1>
+<blockquote>
+<p>author by galin <a href="&#109;&#x61;&#x69;l&#x74;&#111;&#58;&#99;&#x75;&#x74;&#101;&#114;&#x34;&#52;&#64;&#113;&#113;&#x2e;&#99;o&#x6d;">&#99;u&#x74;&#x65;&#x72;&#x34;&#52;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a><br />
+license by CC 3.0 BY  
+</p>
+</blockquote>
+<p>Yooooo! 这里是galin, 今天要讲解的是git的配置和使用方法(Windows向, Linux党除了配置环境变量稍有出入的话应该问题不大, CLI爱好者请自己搜咯).<br />
+这个教程是使用了开发中的TVProtal项目作为<del>场景</del>脑内小剧场, 好处是这样写更易懂也更贴合现在的工作流, 坏处是<strong>实际中使用的工作流不是这样子</strong>的(°д°)b, 我的想法是大家借这个doc了解git的用法并且在10分钟之内就可以上手, 但是如果你想要将git转变为一种可迁移技能的话你应该阅读更多资料比如<a href="http://www.worldhello.net/gotgithub/">GotGitHub</a>(很抱歉我已经找不到更多的,存活的,不用翻墙的,中文的教程了)<br />
+最后一句废话: 有硬伤的话请不吝吐槽m(_ _)m, 好下面是正篇.  </p>
+<blockquote>
+<p>剧本: galin<br />
+主演: galin, FTS, wjh, xillkey (后面两人是我杜撰的请勿介意)</p>
+</blockquote>
+<h2>Chapter 0 服务器的安装和配置</h2>
+<p>留给FTS写.<br />
+本章完</p>
+<h2>Chapter 1 客户端安装和配置</h2>
+<p>作为程序猿一定要养成去发行源下载的好习惯! git的发布地址是 <a href="http://git-scm.com/">http://git-scm.com/</a>, 不过目前已被墙所以我就黑心点自己配了个源:  </p>
+<p><a href="./bin/Git-1.7.11-preview20120620.exe">点此下载无毒无木马无广告无暗扣<em>(:з」∠)</em></a>  </p>
+<p>已经装好的话点<a href="#finish-install">这里</a>跳过</p>
+<p>安装过程很人性化:<br />
+<img src="./asset/setup-1.png" /><br />
+next!  </p>
+<p><img src="./asset/setup-2.png" /><br />
+next!!  </p>
+<p><img src="./asset/setup-3.png" /><br />
+个人喜好即可  </p>
+<p><img src="./asset/setup-4.png" /><br />
+建议这么点<br />
+如果你机器上已经安装有Mingw GCC或者类似东西的话那么你已经自带了一个MSYS(用来在Windows上模拟Bash的工具), 此时你可以考虑不点最下面那个.sh  </p>
+<p><img src="./asset/setup-5.png" /><br />
+next!!!  </p>
+<p><img src="./asset/setup-6.png" /><br />
+建议这么点  </p>
+<p><img src="./asset/setup-7.png" /><br />
+建议这么点<br />
+因为实验室里面有人(比如FTS)用Linux点这个是对Linux党和Windows党的人文关怀~</p>
+<p><a id="finish-install"></a>到这里就装完了, 首次起动之前, 你需要和FTS或galin联系为你建个新的帐号. 如果你熟悉SSH和Bash的话也可以自己来:</p>
+<pre><code>ssh root@10.50.9.1  
+# 密码是rootroot  
+useradd 你的id -Gn935  
+passwd 你的id  
+# 然后按提示帮自己设密码  
+logout  
+</code></pre>
+
+<p>顺带一提git的bin目录下自带OpenSSH你懂的, path的话我忘记要自己添加还是它自动帮你加的了, 反正你懂的╮(╯▽╰)╭  </p>
+<p>很好你现在已经有帐号密码了, 来战个痛决!</p>
+<p>开始菜单 &gt; git GUI ↓<br />
+<img src="./asset/main-1.png" /><br />
+由于TVProtal已经写好成吨的代码了这里我们选克隆.  </p>
+<p><img src="./asset/main-2.png" /><br />
+这里将galin换成你自己的ID _(:з」∠)_<br />
+<del>以及由于我昨晚乱搞的关系现在的Source Locatio已经变成了 <code>你的id@10.50.9.1:/root/projects/tvprotal/.git</code>了</del><br />
+然后由于wjh的暴力操作现在版本库又被迁移到 <code>/opt/tvprotal</code><br />
+让你输入什么就输入好了, 无脑操作 ╮(╯▽╰)╭</p>
+<p><del>回车然后它会提示&quot;You appear to have cloned an empty repository&quot;囧, 这是写教程时的状况请不要介意~</del></p>
+<p>(赞助商广告时间)<br />
+Yoooo! <a href="https://github.com/cuter44/">galin@Github</a>求勾搭~  </p>
+<p>欢迎继续收看git讲座脑内小剧场(卖笑)<br />
+呃呃呃鉴于出了点小状况我们从上上步重新来过, 时间关系我已经在幕后用命令行clone以及各种非正常手段...反正现在我们已经拿到版本库就对了.<br />
+刚才如果成功clone的话会显示&quot;最近的版本库&quot;, 我戳~  </p>
+<p><img src="./asset/main-3.png" /><br />
+一点都不帅对吧, 想要装逼的话你可以试下用<a href="http://sourceforge.net/projects/gitextensions/">Git Ex</a>, 走好不送.  </p>
+<p>用之前还要适当配置:<br />
+编辑(edit) &gt; 选项(options)<br />
+<strong>用户名和邮箱是必填的</strong>(责任追踪到人!), 填全局还是版本库随你, 其余选项按个人喜好~<br />
+现在除了带有clear/delete/rename/assetet/remove之类的危险字眼的操作其它你可以四处逛逛了, 不过后面我们会讲解大部分功能的.  </p>
+<p><strong>科普向</strong>  关于git的分支概念: <br />
+<img src="./asset/branches.png" /><br />
+图示是galin的伪春菜的branches图(典型反例请勿模仿). 如果你对蜘蛛网有变态嗜好的话可以观赏下某些著名的库比如<a href="https://github.com/jquery/jquery/network">jQuery的分支图</a>  </p>
+<p>git对分支的限定相当宽松, 你可以以任何一个节点为基础(base)派生出新分支(甚至可以凭空(orphan)生成分支), 分支也可以随时被合并到其它分支中.<br />
+这样做的好处是<strong>能够在合作编程时最大程度地避免干扰</strong>(因为冲突只会发生在合并操作时), 合并时git可以很智能地自动合并大部分更改, 在git无法处理的情况下它会提示用户具体哪行发生了冲突, 然后由用户选择保留谁的修改(注意是选择~单选题比简答题容易好多对不对?).  </p>
+<p>通常会设定一个主分支, 以作为派生分支的基准和可以发行的副本(记住就好, 现在不用理解这个概念)  </p>
+<p>还有我想吐槽的是由于坑货FTS的缘故, 本来我们还可以架个私有的<a href="https://github.com">GitHub</a>(好处是集成了代码直接下载/即时代码吐槽/错误追踪/wiki等有用功能), 但是现在没有, 我-很-不-开-心(本章完)  </p>
+<h2>Chapter 1.99 版本管理基础知识恶补</h2>
+<p>此章节主要面向超☆新手向的同学, 目前内容只有一条, 但我相信会越来越多的:  </p>
+<ul>
+<li>无论如何都要理解关于<strong>仓库</strong>和<strong>工作版本</strong>的区别</li>
+</ul>
+<blockquote>
+<p><strong>档案库（Repository）</strong>
+存储档案的新版本还有历史资料的地方，通常是在服务器上。有时候也叫Depot（像是在SVK、AccuRev还有Perforce中） <strong>对于git而言在你的本地也有一个库, 它(可以这么说)是服务器上的仓库的副本</strong><br />
+<strong>工作版本（Working copy）</strong>
+从档案库中取出一个本地端（客户端）的复制，针对一个特定的时间或是版本。所有在档案库中的档案更动，都是从一个工作版本中修改而来的，这也是这名称的由来。观念上，这是一个沙盒。<strong>一言以蔽之, 就是你能直接看到的&quot;自己写的代码&quot;<strong>.
+* 根据上述内容, 你</strong>不需要而且千万不要将你克隆下来的代码复制到另一个文件夹, 修改好再覆盖回去</strong>, git或者其他版本管理工具不会通过监视你的文件复制来复制去就自动维护版本. 正确的做法是<strong><span style="color: red;">直接在你的工作版本内进行编辑, 每当你完成一阶段的工作后手动地将代码提交到仓库中</span></strong>.</p>
+</blockquote>
+<h2>Chapter 2 xillkey之章(日常的使用状况)</h2>
+<p>2013年8月某日, xillkey刚来准备做网页渲染, galin在补觉, wjh...不知道在干嘛.<br />
+xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的新版本(假设他昨晚做的更改已经交给wjh合并了, 当然并不需要每晚合并)并创建自己的分支(<strong>重要</strong> 这是避免冲突的法门)<br />
+分支(branch) &gt; 新建(create) ↓<br />
+<img src="./asset/xillkey-1.png" /><br />
+这样就行了...哦截图时分支名字忘了填, 写自己喜欢的标识符就好(但是最好能顾名思义, 因为大家都能看到)</p>
+<p>这里假定xillkey增加了一个css文件, 这个改动会被反映在git的面板上↓<br />
+<em>没看到? 我才不会告诉你要点 重新扫描(assetcan) 呢</em><br />
+<img src="./asset/xillkey-2.png" /></p>
+<p>点文件名可以查看变更的内容, diff可以显示行级的修改情况.<br />
+点图标就可以将所作的变动保存到绿色框的区域下来↓<br />
+两个框都支持同样的交互哦, 简单直观~<br />
+<img src="./asset/xillkey-3.png" />  </p>
+<p>xillkey可以随时点提交(commit)保存已经缓存的改动, 提交操作不会实际上传数据到服务器, 而是将在本地生成一个保存点(打机时的checkpoint都知道?).<br />
+所有已经下载到本地(fetch)的更改记录都可以用分支查看器检视↓(在版本库(repository) &gt; 查看所有分支历史(visuallize all branches' history))<br />
+<img src="./asset/xillkey-4.png" /></p>
+<p>假如xillkey发现他将代码改到太糟糕想倒回去的话(那天晚上我们在调IE不能显示格子就是实例), 他可以在这个界面想要回退到的节点上面点右键 &gt; Reset xillkey branch to here, 然后代码就会被回滚到相应位置了.  </p>
+<p>若干小时后...<br />
+xillkey认为他已经完成工作了, 他可以最后commit一次, 然后点上传(push)(再强调一次只commit不push的话是不会将修改打入服务器的, FTS今天就是这样坑我的)<br />
+<img src="./asset/xillkey-5.png" /><br />
+可以一次上传多个分支, 只有选中分支的更改会上传到服务器. 目标版本库的话由于只有一个所以不用费心了.<br />
+上传后的版本库如图↓(注意wjh在这几个小时内也做出了自己的更改)<br />
+<img src="./asset/xillkey-6.png" /></p>
+<p>根据老邝原本的设定是要由wjh负责做整合的. 所以此时 xillkey 只需要确认上传完了就可以关机走人了, 当然走之前还需要:<br />
+xillkey(^ω^): 搞掂, wjh记得将我改的部分合并进去~<br />
+wjh(T▽T): はい、はい。。。</p>
+<p><strong>科普向</strong> 随手merge解救wjh<br />
+通常来说代码是你写的肯定是你最清楚要改哪里才对, 将代码交给别人做合并其实是一个很不&quot;业界良心&quot;的事. 虽然说使用显式分支可以大大降低冲突的机会, 但还是不能完全避免冲突的. 苦逼的wjh在合并时如果不发生冲突还好, <strong>发生冲突的话他就要苦逼地找造成冲突的责任者来解决问题.</strong><br />
+接下来的一章将会讲解最常用的merge操作, 如果你想继续坑wjh的话看到这里就够了, 继续看下去的话...不好意思没有奖品.
+(本章完)</p>
+<h2>Chapter 3 wjh之章(自动合并:wjh的救赎之路)</h2>
+<p>好吧这章是专门写给wjh看的我们一切从简.<br />
+即使是贵为wjh的存在也是不应该直接动master分支的, 所以wjh也有自己的分支.  </p>
+<p>若干分钟前, wjh接到了xillkey的merge请求. 于是他叹了口气, 保存自己的工作, 打开git GUI 切换到master分支上↓<br />
+<img src="./asset/wjh-1.png" /><br />
+(<strong>注意:在切换分支前最好先将正在工作的分支stage+commit一次, 否则未缓存的改动可能会被切换分支覆盖掉</strong>)(假如将会发生这种情况的话git会预警并阻止你check out, 但是做人还是自重点比较好)<br />
+(<strong>注意</strong>:check out之前最好先 remote &gt; fetch 一次以保证本地的内容是最新的, 否则merge就没意义了, fetch操作不会丢失任何的本地内容(即使未保存)可以放心使用)<br />
+哦顺带一提所谓&quot;跟踪分支(remote branch)&quot;完全是个翻译错误, 正确意思是&quot;远程分支&quot;. 翻译的资源文件在<code>Git\share\git-gui\lib\msgs\zh_cn.msg</code>, 谁闲得蛋疼可以做个完全版的patch出来造福人民(反正我是打开那个文件后就完全没兴趣了)  </p>
+<p>现在可以开始merge了, 点 合并(merge) &gt; 本地合并(local merge)↓<br />
+<img src="./asset/wjh-2.png" /><br />
+选择xillkey的分支, 然后合并, 如果没发生冲突的话, 合并就完成了↓<br />
+(注意 master 已经进化到和 xillkey 同一水平)<br />
+<img src="./asset/wjh-3.png" />  </p>
+<p><strong>科普向</strong> 分支可以重用吗?<br />
+答案是可以的, xillkey在第二天来的时候可以<br />
+ 1. 从 master 创建新的 branch,<br />
+ 2. 从 master 合并到 xillkey(推荐),<br />
+ 3. 直接在 xillkey 上修改完成后再次合并到 master(极不推荐),<br />
+反正无论如何最重要的一点是<strong>绝对不要合并到别人正在写的分支上!!!!!</strong>(svn就是因为存在这种问题才很难用的)<br />
+三种方法是有差别的, 这是个逻辑问题这里就不展开说了.</p>
+<p>(本章完)</p>
+<h2>Chapter 4 galin之章(冲突的解决办法)</h2>
+<p>5点通常都是叫外卖的时候, 既然有了 git 的合并功能, 那么在 QQ 上吆喝谁吃什么再手动收集显然是不科学的事.<br />
+所以, wjh创建了一个调查表what-to-eat.txt来收集订餐状况.  </p>
+<p>what-to-eat.txt(master分支的内容)</p>
+<pre><code>(空白)
+</code></pre>
+
+<p>饱睡的galin听到&quot;外卖&quot;两字瞬间暴起以最快速度完成了branch-commit-merge操作:</p>
+<p>what-to-eat.txt(galin, master两个分支的内容)</p>
+<pre><code>galin(ﾟДﾟ；):我要吃肉卷饭!!
+</code></pre>
+
+<p>而xillkey则慢了一步, 在galin修改文件时他才刚好fetch完, 当他merge的时候, 冲突发生了:<br />
+<img src="./asset/galin-1.png" />  </p>
+<p>此时同一文件的不同状态是:</p>
+<p>what-to-eat.txt(xillkey分支的内容)</p>
+<pre><code>xillkey(‾▽‾&quot;):我要烤鸭饭好了.
+</code></pre>
+
+<p>what-to-eat.txt(master分支的内容)</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+﻿galin(ﾟДﾟ；):我要吃肉卷饭!!
+=======
+﻿xillkey(‾▽‾&quot;):我要烤鸭饭好了.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; xillkey
+</code></pre>
+
+<p>同时git主面板会变得色彩斑斓:<br />
+<img src="./asset/galin-2.png" /><br />
+(不要吐槽乱码这个不是重点)<br />
+那三行黄色的(对应源文件的三行)就是git加上去的, 意思是要提醒你哪里冲突了, 这时你要做的就是用编辑器打开冲突的文件(不能直接在git面板改), 改成你期望的结果.  </p>
+<p>这里按照场景应该将两行都保留下来, 所以直接删掉第1,3,5行即可.  </p>
+<p>如果你什么都不改或者漏了哪里没改的话, 你将会被git吐槽<br />
+<em>愚蠢的蓝星人你还没有解决冲突呢真的要保存吗? &gt;是(灰色) &gt;否</em></p>
+<p><strong>科普向</strong> 正确撰写commit message<br />
+估计你在点&quot;提交&quot;时已经遇到过这个状况了, git不允许将这里留空, 这是个好习惯, 无论是单机还是团战, 知道某个节点改了什么内容是非常重要的.<br />
+以下是摘自 cuter44(galin的马甲id)/librarica的某个commit:</p>
+<pre><code>登录/激活功能追加完成
+
++ Web API, 详情请参见javadoc
+  + /authorize/register
+    ! 现在还不能发邮件, 但是会通过json返回激活之必要参数
+  + /authorize/activate
+  * /authorize/login
+    + 追加了样例
+  * /authorize/logout
+    + 追加了样例
+  * /authorize/getRsaKey
++ 追加Criteria机能, 详请参考wiki:Criteria
++ 追加了用于RSA加密的实用工具, 详请参考wiki:服务器部署指南
+</code></pre>
+
+<p>大概就是这样咯, 这种事见仁见智我就不说什么了\挖鼻</p>
+<h2>Side Color I 正常青年和作死青年</h2>
+<p><em>那个...不定期更新, 欢迎投稿~</em>↓</p>
+<p><img src="./asset/final-1-right.png" /><br />
+普通青年: 以单一的版本作为根, 有序地分支和合并分支.  </p>
+<p><img src="./asset/final-1-wrong.png" />
+作死青年: 给别人分发代码时没有附带版本化信息, 拿回来后合并出一吨的冲突只好手动解决.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
