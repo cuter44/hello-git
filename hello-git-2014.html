@@ -296,7 +296,8 @@ img {
 <p>@author galin&lt;<a href="&#109;&#x61;&#x69;l&#x74;&#111;&#58;&#99;&#x75;&#x74;&#101;&#114;&#x34;&#52;&#64;&#113;&#113;&#x2e;&#99;o&#x6d;">&#99;u&#x74;&#x65;&#x72;&#x34;&#52;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a>&gt;<br />
 @license <a href="">CC 3.0 BY</a><br />
 @version 2.0.0-build-20140421
-older version -&gt; <a href="./hello-git-2014.html">./hello-git-2013.html</a></p>
+older version -&gt; <a href="./hello-git-2013.html">./hello-git-2013.html</a>
+whenever you find a leak, feel free to report @<a href="https://github.com/cuter44/hello-git/issues">github issue</a></p>
 </blockquote>
 <h1>Chapter 0 Metadata</h1>
 <p>通常来说这个时候应该说下 <em>git是什么</em>, 不过出于无障碍阅读的原则, 今年的版本决定不说了. 现在, 只需要将 git 理解成 <strong>一个可以在多人环境下随时保存和合并源代码的工具</strong> 即可.<br />
@@ -309,6 +310,7 @@ older version -&gt; <a href="./hello-git-2014.html">./hello-git-2013.html</a></p
 <pre><code>apt-get install git
 </code></pre>
 
+<p>, 或者等价的包管理器指令(yum, pacman 等)</p>
 <h2>on Windows</h2>
 <p>这里是适合普通人的操作步骤:<br />
 首先要下载安装包, 以下源你可以随便挑一个:</p>
@@ -340,10 +342,10 @@ older version -&gt; <a href="./hello-git-2014.html">./hello-git-2013.html</a></p
 <h1>Chapter 2 心に刻んだ夢を放て!</h1>
 <p><img src="./asset/72f5bfea-s.jpg" /></p>
 <blockquote>
-<p>NOTE 标题出自炮姐OP, 题图出自机巧少女, 图片仅供参考.</p>
+<p>标题出自炮姐OP, 题图出自机巧少女, 图片仅供参考.</p>
 </blockquote>
 <p>好吧目前还没有碉堡到这种↑程度咯 (´・ω・｀)  </p>
-<p>总之什么都好现在可以打开刚刚装好的git吧, 如无意外开始菜单会多出名为 Git GUI 的东西(なに? Linux? 先不管吧...), 会看到这个↓<br />
+<p>总之什么都好现在可以打开刚刚装好的git吧, 如无意外开始菜单会多出名为 Git GUI 的东西(なに? Linux? Linux党会说不需要这个教程咯...), 会看到这个↓<br />
 <img src="./asset/main-1.png" /></p>
 <p>时间关系我们就先拿这篇教程的仓库来做范例吧, 请随意在原有基础上做修改, 因为我不在 github 上授权的话你是根本提交不了的23333</p>
 <blockquote>
@@ -358,17 +360,18 @@ Target Location: (自己的工程目录)
 </code></pre>
 
 <p>完成之后会变成以下界面:
+<span id="main-screen"></span>
 <img src="./asset/main-3.png" /></p>
 <p>然后可以尝试下去点 <code>Repository</code> &gt; <code>Visualize all branches history</code><br />
-然后你会看到一条直线, 这不奇怪, 因为这不是一个协作项目, 在我的刻意维持之下, 这个版本库退化成线性的. 但你仍然可以随意浏览下更新记录, 你会看到很多 ++/-- 的符号, 这些符号简明扼要地描述了我修改过哪些东西.</p>
-<h1>Chapter 3 935日常 - xillkey</h1>
+然后你会看到一条直线, 这不奇怪, 因为这不是一个协作项目, 在我的刻意维持之下, 分支树退化成线性的. 但你仍然可以随意浏览下更新记录, 你会看到很多 ++/-- 的符号, 这些符号简明扼要地描述了我修改过哪些东西.</p>
+<h1>Chapter 3 935日常 - xillkey的css</h1>
 <blockquote>
-<p>NOTE 事实上这章说的是怎么提交代码</p>
+<p>事实上这章说的是怎么提交代码, 跟 css 没有关系</p>
 </blockquote>
 <p>2013年8月某日, xillkey(前端)刚来准备做网页渲染, galin(后端)在补觉, wjh(技术总监)...不知道在干嘛.<br />
 xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的新版本(假设他昨晚做的更改已经交给wjh合并了, 当然并不需要每晚合并)并创建自己的分支  </p>
 <blockquote>
-<p>HINT <strong>分支</strong>是避免冲突的有力武器</p>
+<p>HINT 分支是避免冲突的有力武器, 一条重要的准则是不要随意触动别人的分支</p>
 </blockquote>
 <p><code>分支(branch)</code> &gt; <code>新建(create)</code> ↓<br />
 <img src="./asset/xillkey-1.png" />  </p>
@@ -376,7 +379,9 @@ xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的�
 <p>这里假定xillkey增加了一个css文件, 这个改动会被反映在git的面板上↓  <br />
 <img src="./asset/xillkey-2.png" />  </p>
 <blockquote>
-<p>如果没看到更改, 可以点下<code>重新扫描(Rescan)</code></p>
+<p>如果没看到更改, 可以点下<code>重新扫描(rescan)</code>
+<span></span>
+WARN 这里循例要强调一次, 请直接在你<code>clone</code>下来的基础上修改, 而不是复制到别的文件夹修改完再覆盖回来(╯‵д′)つ)×﹏×)</p>
 </blockquote>
 <p>点文件名可以查看变更的内容, 也就是上一章在历史记录中看到的 ++ 和 -- 们<br />
 点图标就可以将所作的变动保存到绿色框的区域下来↓<br />
@@ -390,15 +395,174 @@ xillkey启动了电脑, 首先它需要从版本库拿到昨晚wjh合并好的�
 <img src="./asset/xillkey-4.png" /></p>
 <p>假如xillkey发现他将代码改到太糟糕想倒回去的话(比如写了一大堆才发现IE根本不鸟...), 他可以在这个界面想要回退到的节点上面点右键 &gt; <code>Reset xillkey branch to here</code>, 然后代码就会被回滚到相应位置了.  </p>
 <p>若干小时后...<br />
-xillkey认为他已经完成工作了, 他可以最后commit一次, 然后点上传(push)(再强调一次只commit不push的话是不会将修改打入服务器的, FTS今天就是这样坑我的)<br />
-<img src="./asset/xillkey-5.png" /><br />
-可以一次上传多个分支, 只有选中分支的更改会上传到服务器. 目标版本库的话由于只有一个所以不用费心了.<br />
-上传后的版本库如图↓(注意wjh在这几个小时内也做出了自己的更改)<br />
-<img src="./asset/xillkey-6.png" />  </p>
+xillkey认为他已经完成工作了, 他可以最后<code>commit</code>一次, 然后点<code>上传(push)</code>(关于<code>commit</code>和<code>push</code>的区别, 将在章末讲述)<br />
+<img src="./asset/xillkey-5.png" />  </p>
+<p>上传后的版本库如图↓(注意wjh在这几个小时内也做出了自己的更改)<br />
+<span id="branch-tree"></span>
+<img src="./asset/xillkey-6.png" /></p>
 <p>根据老邝原本的设定是要由wjh负责做整合的. 所以此时 xillkey 只需要确认上传完了就可以关机走人了, 当然走之前还需要:<br />
 xillkey(^ω^): 搞掂, wjh记得将我改的部分合并进去~<br />
 wjh(T▽T): はい、はい。。。</p>
-<p><img src="http://cdn-ak.f.st-hatena.com/images/fotolife/t/torucky/20140223/20140223152241.jpg" /></p>
+<blockquote>
+<p>NOTE 在第一次提交的时候 git 会提示你需要一个id和邮件地址, 这很重要, 因为你肯定想知道当初那行代码是谁添加进来的.<br />
+要设定自己的id, <code>编辑(edit)</code>&gt;<code>选项(options)</code></p>
+</blockquote>
+<h2>git的逻辑结构</h2>
+<p>先上图:</p>
+<p><img src="./asset/basic-usage.png" /><img src="./asset/20140223152241.jpg" /></p>
+<blockquote>
+<p>git的结构图基于<a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解git</a>, 卖萌图来自<a href="http://torucky.hatenablog.com/entry/2014/02/23/191539">トラッキーのグータラな日常記録(´∀｀*)←</a>  
+</p>
+</blockquote>
+<p>git 的逻辑结构分三层(废话), 首先请向上滚一小段距离, 留意下<a href="#main-screen">主界面</a>和<a href="#branch-tree">分支树</a>两张图</p>
+<ul>
+<li><code>Working Directory</code>就是你叭嗒叭嗒敲的代码, 对应于在主界面的<span style="background-color:#ffa07a">未缓存的改动</span>和分支树上的<span style="color:red;">●</span>红点(仅在修改过而又未保存时出现)</li>
+<li><code>Stage</code>是缓存但未提交的文件, 对应于主界面的<span style="background-color:#90ee90">已缓存的改动</span>和<span style="color:yellow;">●</span>黄点</li>
+<li><code>History</code>是已保存的部分, 也就是上文说的&quot;毁灭性打击也没关系&quot;的部分(因为保存到这里就很删不掉了), 对应于分支树上的<span style="color:blue;">●</span>蓝点  </li>
+</ul>
+<blockquote>
+<p>HINT 你不必记住那些命令, 但你应该在我提到 commit 的时候知道我在指什么  
+</p>
+</blockquote>
+<p><span></span></p>
+<blockquote>
+<p>NOTE 其实并非真的&quot;删不掉&quot;, 前提是你能在<strong>全部</strong>副本上删掉它. 至于怎么做到, 请接着观看以下的部分.  
+</p>
+</blockquote>
+<p>以上这个栈<strong>独立</strong>且<strong>完整</strong>地存在于每一台参与到版本库的机器上, 而对于(wjh, xillkey, 5+0)组成的开发小队情况则会变成这样:<br />
+<img src="./asset/remotes.png" /></p>
+<blockquote>
+<p>唔..好像透视不太对...现在请不要吐槽</p>
+</blockquote>
+<p>这里会引入两个新操作:   </p>
+<ul>
+<li><code>推送(push)</code>是指将自己的分支树同步到别人的机器上(也就是xillkey刚才做的)  </li>
+<li><code>拉取(fetch)</code>是指将别人的分支树同步到自己的机器上  </li>
+</ul>
+<p><code>push</code>和<code>fetch</code>操作都只能在<code>History</code>层上运行, 换言之, 这两个操作不会干扰到正在写的代码, 任何时候都可以放心执行<br />
+提交的代码一旦通过<code>push</code>和<code>fetch</code>操作散播到其他机器上, 就很难撤销了(因为散播开去了呗). 所以<strong>提交前请务必慎重检查提交内容</strong>, 千万不要将<a href="http://en.wikipedia.org/wiki/Garbage_in,_garbage_out">编译期的垃圾</a>, 帐户名和密码, 胖次或者果照(喂!)提交到版本库, 不然...删-不-掉-的-哦-♪</p>
+<blockquote>
+<p>HINT 你可以预先告诉git什么是不能提交的, 详情请 <a href="http://git-scm.com/docs/gitignore"><code>man gitignore</code></a>  
+</p>
+</blockquote>
+<p><span></span></p>
+<blockquote>
+<p>HINT 另外, 图示的是<code>中心式版本库</code>的情况, xillkey也可以与5+0直接进行通信, 这时我们称它为<code>分布式版本库</code>.  
+</p>
+</blockquote>
+<h1>935日常 - wjh的救赎</h1>
+<p>(续上)<br />
+(首先请自行脑补一个黑白滤镜)<br />
+曾经, wjh每次听到&quot;合并&quot;这个词, 都会瞬间颓丧到就像...像...(台词机坏掉了不好意思), 然后默默打开 eclipse 逐块地复制粘贴...</p>
+<p>(现在变回彩色的)<br />
+但是, 自从有了 git, 妈妈再也不用担心 wjh 的合并工作了, ...
+(好吧实在没台词了, 去片!)</p>
+<p>若干分钟前, wjh接到了xillkey的merge请求. 于是他叹了口气, 保存自己的工作, 打开git GUI 切换到master分支上↓<br />
+<img src="./asset/wjh-1.png" /></p>
+<blockquote>
+<p>NOTE 这里, &quot;保存自己的工作&quot; 是指将还没写完的工作按上一章的方法提交一次. 除此之外还存在另一种恰好适用于这个场景的<a href="http://git-scm.com/book/zh/Git-工具-储藏（Stashing）"><code>储存(stash)</code></a>办法  
+</p>
+</blockquote>
+<p>现在可以开始merge了, 点 <code>合并(merge)</code> &gt; <code>本地合并(local merge)</code>↓  <br />
+<img src="./asset/wjh-2.png" /><br />
+选择xillkey的分支, 然后合并, 如果没发生冲突的话, 合并就完成了↓<br />
+<img src="./asset/wjh-3.png" /></p>
+<blockquote>
+<p>很抱歉截图被我不小心覆盖掉了, 现在这个是PS出来的orz...</p>
+</blockquote>
+<h2>分支是什么</h2>
+<p>直到现在为止, 你大概已经有个模糊的概念了: git的分支树就像RPG的游戏大纲, 可以分支可以合并, 有 good end 也有 bad end. 中间的每一个节点就是故事的一个章节.</p>
+<blockquote>
+<p>或者...暗示了什么, 每一次开发都是一次大冒险啊╮(╯□╰)╭</p>
+</blockquote>
+<p>分支之间是互相隔离的, 你在本机上的分支<code>branch</code>在别人的机器上会显示为<code>remotes/host/branch</code>, 你可以随时与任何分支进行交互(<code>检出(checkout)</code>, <code>提交(commit)</code>, <code>合并(merge)</code>, <code>变基(rebase)</code>, etc.).<br />
+git的灵活性是建基于分支特性上的, 因为可以在很大的自由度上操作分支, 比如可以在同一时间存在多套代码(当你为一个功能想到两种实现的时候), 比如可以跨步合并(&quot;读后写&quot;的问题). 这些都会在生产环境中遇到, 但现在不会详细论述.  </p>
+<blockquote>
+<p>对于 ACM/OI 经验者这里有个额外的tip: 试想象一个非线性链表以及各种指针.</p>
+</blockquote>
+<h1>935日常 - 5+0是麻烦制造者</h1>
+<blockquote>
+<p>现在, 拿出你的笔电吧, 我们要订外卖了~  
+</p>
+</blockquote>
+<p>5点通常都是叫外卖的时候, 既然有了 git 的合并功能, 那么在 QQ 上吆喝谁吃什么再手动收集显然是不科学的事.<br />
+所以, wjh创建了一个调查表what-to-eat.txt来收集订餐状况.  </p>
+<p>what-to-eat.txt(<code>master</code>分支的内容)</p>
+<pre><code>(空白)
+</code></pre>
+
+<p>饱睡的galin听到&quot;外卖&quot;两字瞬间暴起以最快速度完成了<code>checkout</code>-<code>commit</code>-<code>merge</code>操作:</p>
+<p>what-to-eat.txt(<code>galin</code>, <code>master</code>分支的内容)</p>
+<pre><code>galin(ﾟДﾟ;):我要吃肉卷饭!!
+</code></pre>
+
+<p>而xillkey则慢了一步, 在galin修改文件时他才刚好<code>fetch</code>完, 当他<code>merge</code>的时候, 冲突发生了:<br />
+<img src="./asset/galin-1.png" />  </p>
+<p>此时同一文件的不同状态是:</p>
+<p>what-to-eat.txt(<code>xillkey</code>分支的内容)</p>
+<pre><code>xillkey(‾▽‾&quot;):我要烤鸭饭好了.
+</code></pre>
+
+<p>what-to-eat.txt(<code>master</code>分支的内容)</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+﻿galin(ﾟДﾟ；):我要吃肉卷饭!!
+=======
+﻿xillkey(‾▽‾&quot;):我要烤鸭饭好了.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; xillkey
+</code></pre>
+
+<p>同时git主面板会变得色彩斑斓:<br />
+<img src="./asset/galin-2.png" />  </p>
+<blockquote>
+<p>请不要吐槽乱码因为那不是重点</p>
+</blockquote>
+<p>其中三行黄色的(对应源文件的三行)就是git加上去的, 它提示了哪里有冲突, 以及冲突的内容. 你需要用文本编辑器修正到你需要的结果, 删除git添加的标记, 然后才能继续提交.</p>
+<p>这里按照场景应该将两行都保留下来, 所以直接删掉第1,3,5行.<br />
+然后再次进行 <code>缓存改动(stage)</code>, <code>提交(commit)</code> 即可.  </p>
+<blockquote>
+<p>如果你什么都不改或者漏了哪里没改的话, 你将会被git吐槽:<br />
+<em>愚蠢的蓝星人你还没有解决冲突呢真的要保存吗? &gt;是(灰色) &gt;否</em></p>
+</blockquote>
+<h2>关于冲突</h2>
+<p>大多数情况下 git 能够自动理解要怎么合并你的文件, 就像上一章那样(我们称之为<code>fast-forward</code>). 但假如多个人同时修改文件的同一处地方, 就有可能超出它的理解范围了, 这时它需要向人类询问该怎么办(也就是<code>conflict</code>).<br />
+所以你也猜到了, 要避免冲突, 最好的办法就是事先要约定好各自可以动的文件和命名域. 5+0从云宏离职部分原因就是队友太水经常引发冲突.</p>
+<h1>额外的参考文献</h1>
+<ol>
+<li><a href="http://github.github.com/github-flavored-markdown/">Github Flavored Markdown Reference</a></li>
+<li><a href="http://git-scm.com/book/zh">Pro Git(中文)</a></li>
+<li><a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解Git</a></li>
+</ol>
+<h1>番外: 作死青年事件簿</h1>
+<blockquote>
+<p>这里收集了自2013年开始935在git实践中遇到的各种不合理状况:</p>
+</blockquote>
+<h2>分支树维护</h2>
+<p><img src="./asset/final-1-right.png" /><br />
+普通青年: 以单一的版本作为根, 有序地分支和合并分支.  </p>
+<p><img src="./asset/final-1-wrong.png" /><br />
+作死青年: 给别人分发代码时没有附带版本化信息, 拿回来后合并出一吨的冲突只好手动解决.  </p>
+<h2>提交附言要这样写</h2>
+<p>↓ 这是一个没什么价值的提交记录, 因为它等于什么都没说  </p>
+<pre><code>整合
+</code></pre>
+
+<p>↓ 这是相对好的实践, 简明扼要地指出这次提交修改了什么</p>
+<pre><code>登录/激活功能追加完成
+
++ Web API, 详情请参见javadoc
+  + /authorize/register
+    ! 现在还不能发邮件, 但是会通过json返回激活之必要参数
+  + /authorize/activate
+  * /authorize/login
+    + 追加了样例
+  * /authorize/logout
+    + 追加了样例
+  * /authorize/getRsaKey
++ 追加Criteria机能, 详请参考wiki:Criteria
++ 追加了用于RSA加密的实用工具, 详请参考wiki:服务器部署指南
+</code></pre>
+
+<p>不过, 具体采用何种实践其实也是自由的, 这只是一个建议而已.</p>
 
 </body>
 </html>
