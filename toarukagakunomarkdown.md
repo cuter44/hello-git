@@ -114,7 +114,7 @@ GFM 支持段前后 重音符×3 + 语言名 进行代码高亮
 
 ## WebApp 解决方案
 
-FTS. 推荐使用 [StackEdit](https://stackedit.io/)
+FTS. 推荐使用 [StackEdit](https://stackedit.io/) 或 [Cmd Markdown](https://www.zybuluo.com/mdeditor)
 
 ## Windows 解决方案
 
@@ -123,7 +123,8 @@ FTS. 推荐使用 [StackEdit](https://stackedit.io/)
 
 ## Linux 解决方案
 
-(FTS. 后补)
+- Emacs + Markdown Mode
+- vim-markdown
 
 ## 编程解决方案
 
