@@ -2,9 +2,10 @@
 
 > @author galin&lt;[cuter44@qq.com](mailto:cuter44@qq.com)&gt;  
 > @license [CC 3.0 BY]()  
-> @version 2.0.0-build-20140421
-> older version -&gt; [./hello-git-2013.html](./hello-git-2013.html)
-> whenever you find a leak, feel free to report @[github issue](https://github.com/cuter44/hello-git/issues)
+> @version 2.0.0-build-20140421  
+> older version -&gt; [./hello-git-2013.html](./hello-git-2013.html)  
+> whenever you find a leak, feel free to report @[github issue](https://github.com/cuter44/hello-git/issues)  
+> @acknowledge [MarkdownPad2](http://markdownpad.com/), [Github Pages](https://pages.github.com/‎)
 
 # Chapter 0 Metadata
 通常来说这个时候应该说下 _git是什么_, 不过出于无障碍阅读的原则, 今年的版本决定不说了. 现在, 只需要将 git 理解成 **一个可以在多人环境下随时保存和合并源代码的工具** 即可.  
@@ -271,11 +272,28 @@ what-to-eat.txt(`master`分支的内容)
 ![](./asset/final-1-wrong.png)  
 作死青年: 给别人分发代码时没有附带版本化信息, 拿回来后合并出一吨的冲突只好手动解决.  
 
+![](./asset/final-1-wrong-2.png)  
+还有些很有艺术感的...(到底经历了什么才可以变成这样子)
+
 ## 提交附言要这样写
 
 ↓ 这是一个没什么价值的提交记录, 因为它等于什么都没说  
 
     整合
+
+↓ 或者嘲讽向...
+
+    Author: zrh <zrh_sky@163.com>  2014-06-21 11:01:40
+    Committer: zrh <zrh_sky@163.com>  2014-06-21 11:01:40
+    Parent: 71ba9854d896a59a92a30828742ad05a8ede46a4 (测试过滤器)
+    Child:  7ebbcaefb9468d7c3063d46f43b26c26a402c949 (Merge branch 'zrh' of http://github.com/scauwjh/weixin into zrh)
+    Branches: remotes/origin/master, remotes/origin/zrh
+    Follows: 
+    Precedes: 
+
+    没修改什么
+
+-------- src/java/com/pk/platform
 
 ↓ 这是相对好的实践, 简明扼要地指出这次提交修改了什么
 
