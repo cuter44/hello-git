@@ -29,6 +29,9 @@ Markdown 是一种由蓝星人首发的轻量级标记语言, 唯一的特点是
 
 只使用 Markdown 标记无法插入更多的格式(主要是没有必要), <font color=#030C6F>但</font><font color=#061878>你</font><font color=#092481>可</font><font color=#0C308A>以</font><font color=#0F3C93>使</font><font color=#12489C>用</font><font color=#1554A5>H</font><font color=#1860AE>T</font><font color=#1B6CB7>M</font><font color=#1E78C0>L</font><font color=#2184C9>标</font><font color=#2490D2>记</font><font color=#279CDB>来</font><font color=#2AA8E4>达</font><font color=#2DB4ED>成</font><font color=#30C0F6>.</font> 因为在MD中使用的任何HTML标记都会被原样地翻译, 只要目标文本格式支持等价的功能.
 
+\~\~~~删除线~~\~\~
+只有 GFM 支持
+
 ## 插入!
 
 ### 图片
@@ -44,10 +47,12 @@ Markdown 是一种由蓝星人首发的轻量级标记语言, 唯一的特点是
 
 ### 代码
 
-行前空四格, 或段落首尾三个重音符.
+行前空四格.
 
 	while (true)
 		(▽·ω·▽)
+
+GFM 支持段前后 重音符×3 + 语言名 进行代码高亮
 
 ### 引用
 
@@ -92,9 +97,9 @@ Markdown 是一种由蓝星人首发的轻量级标记语言, 唯一的特点是
 
 仅 GFM 支持, 否则会变成一团糟. 比如 MarkdownPad 2 的免费版就这么不良心.
 
-|表|格|是|啥|可|以|吃|吗|
------------------------
-|(累觉不爱...)|
+|表|格|是|啥|可|以|吃|吗|  
+|--|--|--|--|--|--|--|--|  
+|(累觉不爱...)||||||||  
 
 
 ### 颜文字  
